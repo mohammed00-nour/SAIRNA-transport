@@ -151,7 +151,7 @@ export default function Login() {
                     <img
                         src="https://res.cloudinary.com/dv6aotwvd/image/upload/v1793965559/image_1_smcvub.jpg"
                         alt="المسجد الأموي في دمشق"
-                        className="relative z-10 mt-1 h-[270px] w-full -rotate-[4deg] rounded-[15px] object-cover shadow-[var(--shadow-md)] max-sm:h-[210px]"
+                        className="relative z-10 mt-8 h-[270px] w-full -rotate-[4deg] rounded-[15px] object-cover shadow-[var(--shadow-md)] max-sm:h-[210px]"
                     />
                     <div className="relative z-10 mt-7 flex items-center justify-between gap-3 text-[10px] font-bold text-white">
                         <p className="flex items-center gap-2">

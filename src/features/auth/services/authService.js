@@ -19,7 +19,6 @@ export const register = async (name, email, password) => {
         throw error;
     }
 }
-
 export const me = async () => {
     try {
         const response = await api.get('/auth/me');
