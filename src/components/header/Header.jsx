@@ -1,8 +1,8 @@
 import { navLinks } from '../../data/navLinks'
 import Navbar from '../nav/Navbar'
 
-import { NavLink, Link } from 'react-router-dom'
-import { useState } from 'react'
+import { NavLink, Link, useLocation } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 
 import { ArrowLeft, Moon, Sun, Menu, Sparkles } from "lucide-react";
 
@@ -16,7 +16,11 @@ import { useThemeLight } from '../../stores/themeLight'
 export default function Header() {
     const theme = useThemeLight((state) => (state.themeLight))
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const location = useLocation();
 
+    useEffect(() => {
+        setIsMenuOpen(false);
+    }, [location.pathname]);
     const { data: user } = useMe();
     const accessToken = useAuthStore((state) => state.accessToken);
 
@@ -98,13 +102,16 @@ export default function Header() {
                         <div className="absolute top-0 right-0 z-50 w-full bg-[var(--surface)] px-[20px] py-[8px] shadow-lg [min-900px]:hidden left-12 transition-transform duration-300 ease-in-out">
                             <div className="flex items-center justify-between">
                                 <Logo />
-                                <Button variant='primary' size='medium' className='absolute top-4 left-[20px] text-[23px] px-4 py-1 '
+                                <Button variant='primary' size='medium' className='absolute top-4 left-[20px] text-[23px] px-2.5 py-0 '
                                     onClick={() => { setIsMenuOpen(false) }}>
                                     X
                                 </Button>
                             </div>
                             <div className="mt-4">
-                                <Navbar className="" />
+                                <Navbar
+                                    isLoggedIn={Boolean(accessToken)}
+                                    onNavigate={() => setIsMenuOpen(false)}
+                                />
                             </div>
                         </div>
                     </>

@@ -82,7 +82,7 @@ export default function Login() {
                             <input
                                 type="password"
                                 id="password"
-                                placeholder="أكتب على الأقل 6 أحرف"
+                                placeholder="أكتب على الأقل 8 أحرف"
                                 className="w-full bg-transparent text-[11px] text-[var(--text)] outline-none placeholder:text-[var(--muted)]"
                                 value={formData.password}
                                 onChange={(e) => setFormData({ ...formData, password: e.target.value })}

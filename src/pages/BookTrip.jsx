@@ -111,10 +111,10 @@ export default function BookTrip() {
                             </p>
                         </div>
                     </div>
-                    <div className="absolute left-[50px] top-[50px] z-30 text-[var(--primary)]/90 rotate-[-10deg] ">
+                    <div className="absolute left-[20px] top-[20px] md:left-[50px] md:top-[50px] z-30 text-[var(--primary)]/90 rotate-[-10deg]  ">
                         <Bus
-                            width={80}
-                            height={80}
+                            width={70}
+                            height={70}
                             strokeWidth={1.85}
                             className="sairna-icon"
                             aria-hidden="true"
