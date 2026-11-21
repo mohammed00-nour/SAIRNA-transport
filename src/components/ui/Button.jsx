@@ -4,6 +4,7 @@ export default function Button({ children, variant = "primary", size = "medium",
         secondary: "flex items-center gap-2 rounded-xl bg-[var(--dark-deep)] px-5 py-3 text-sm font-bold text-white hover:bg-[var(--dark)] transition duration-300 cursor-pointer focus:scale-100 active:scale-90 sm:flex hidden",
         outline: "border border-[var(--primary)] text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white",
         ghost: "text-[var(--text)] hover:bg-[var(--surface-alt)]",
+        reSet: "bg-transparent text-[var(--text)] hover:bg-[var(--surface-alt)] hover:text-[var(--primary)] transition rounded-xl",
     };
     
     const sizes = {

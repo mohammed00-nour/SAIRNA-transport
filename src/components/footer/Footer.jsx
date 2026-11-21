@@ -30,8 +30,8 @@ export default function Footer() {
                         <ul className="flex flex-col gap-4 text-[10px] font-medium text-[var(--muted)]">
                             <li><Link to="/" className="transition hover:text-[var(--primary)]">الرئيسية</Link></li>
                             <li><Link to="/trips" className="transition hover:text-[var(--primary)]">احجز رحلتك</Link></li>
-                            <li><Link to="/companies" className="transition hover:text-[var(--primary)]">شركات النقل</Link></li>
-                            <li><Link to="/tracking" className="transition hover:text-[var(--primary)]">تتبع رحلتك</Link></li>
+                            <li><Link to="/transport-companies" className="transition hover:text-[var(--primary)]">شركات النقل</Link></li>
+                            <li><Link to="/track-trip" className="transition hover:text-[var(--primary)]">تتبع رحلتك</Link></li>
                         </ul>
                     </div>
                     <div>
@@ -39,7 +39,7 @@ export default function Footer() {
                         <ul className="flex flex-col gap-4 text-[10px] font-medium text-[var(--muted)]">
                             <li><Link to="/login" className="transition hover:text-[var(--primary)]">تسجيل الدخول</Link></li>
                             <li><Link to="/register" className="transition hover:text-[var(--primary)]">إنشاء حساب</Link></li>
-                            <li><Link to="/bookings" className="transition hover:text-[var(--primary)]">حجوزاتي</Link></li>
+                            <li><Link to="/my-bookings" className="transition hover:text-[var(--primary)]">حجوزاتي</Link></li>
                             <li><Link to="/profile" className="transition hover:text-[var(--primary)]">الملف الشخصي</Link></li>
                         </ul>
                     </div>

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useAuthStore } from "../features/auth/store/authStore";
+import { useAuthStore } from "../stores/authStore";
 
 const api = axios.create({
     baseURL: 'https://sairna.abdulrahman-hares.com/api/v1/website',
@@ -22,9 +22,16 @@ api.interceptors.request.use(
 api.interceptors.response.use(
     (response) => response,
     (error) => {
-        if (!"/auth/me".includes("/auth/login")) {
+        const status = error.response?.status;
+        const url = error.config?.url || "";
+        const isAuthRequest =
+            url.includes("/auth/login") ||
+            url.includes("/auth/register");
+
+        if (status === 401 && !isAuthRequest) {
             useAuthStore.getState().clearAccessToken();
         }
+
         return Promise.reject(error);
     }
 );

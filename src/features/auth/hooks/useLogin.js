@@ -1,12 +1,12 @@
 import { useMutation } from '@tanstack/react-query'
 import { login } from '../services/authService'
-import { useAuthStore } from "../store/authStore";
+import { useAuthStore } from "../../../stores/authStore";
 
 export const useLogin = () => {
-    return useMutation ({
+    return useMutation({
         mutationKey: ["login"],
-        mutationFn: ({email, password}) => login(email, password),
-        
+        mutationFn: ({ email, password }) => login(email, password),
+
         onSuccess: (data) => {
             useAuthStore.getState().setAccessToken(data.accessToken);
         },
@@ -14,5 +14,5 @@ export const useLogin = () => {
             console.error('Login error:', error);
         }
     })
-    
+
 }

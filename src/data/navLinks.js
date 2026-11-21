@@ -7,7 +7,7 @@ export const navLinks = [
   {
     id: 2,
     title: "احجز رحلة",
-    path: "/book-trip",
+    path: "/trips",
   },
   {
     id: 3,
@@ -16,8 +16,8 @@ export const navLinks = [
   },
   {
     id: 4,
-    title: "حجوزات",
-    path: "/bookings",
+    title: "حجوزاتي",
+    path: "/my-bookings",
   },
   {
     id: 5,
